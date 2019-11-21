@@ -16,7 +16,7 @@ pipeline:
     host: swarm.sharpnotions.local
     username: sndocker
     secrets: [ ssh_password ]
-    command_timeout: 600
+    command_timeout: 5m
     script:
       - docker service update --detach=false --image=registry.swarm.sntestlab.com/hackathon-team-b:1.0.${DRONE_BUILD_NUMBER} --restart-max-attempts 10 hackathon-team-b
     when:
