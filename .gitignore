@@ -1,4 +1,5 @@
 stl-vis/node_modules/*
 stl-vis/examples/city.jscad
+jscadTranspiler/data/city.json
 
 node_modules/

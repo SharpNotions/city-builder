@@ -1,13 +1,14 @@
 const buildBuilding = (position, scale) =>
-  cube({ size: 1, center: true })
+  cube({ size: 1, center: [true, true, false] })
     .translate(position)
     .scale(scale);
 
 const buildHouse = position =>
   buildBuilding(position, [1, 1, 1]);
 
-const buildSkyScraper = position => 
-  buildBuilding(position, [1, 1, 3]);
+const buildSkyScraper = position => {
+  return buildBuilding(position, [1, 1, Math.floor(Math.random() * 3) + 3]);
+}
 
 const getBuildingPosition = building =>
   [building.x, building.y, 0];

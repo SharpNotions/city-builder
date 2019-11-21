@@ -7,6 +7,13 @@ cd jscadTranspiler
 node index.js
 ```
 
+### Generate random data
+
+```
+cd jscadTranspiler
+node generateRandomData.js && node index.js
+```
+
 ## Run local vis server
 
 ```
