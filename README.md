@@ -1,6 +1,14 @@
 # hackathon-team-b
 
-## Run local vis
+## Compile city JSCAD
+
+```
+cd jscadTranspiler
+node index.js
+```
+
+## Run local vis server
+
 ```
 cd stl-vis
 npm i
