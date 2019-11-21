@@ -26,7 +26,7 @@ pipeline:
   notify:
     image: plugins/slack
     webhook: ${SLACK_WEBHOOK}
-    channel: hackathon
+    channel: hackathon-team-b
     username: drone
     icon_url: https://discourse.drone.io/uploads/drone/original/1X/3c1169460330cd8c88c9da925e7bbbd7ace83200.png
     secrets: [ slack_webhook ]
