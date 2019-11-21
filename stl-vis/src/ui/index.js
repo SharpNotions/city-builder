@@ -94,7 +94,7 @@ function init () {
         setElementHeight(examples, '0px')
         examples.style.display = 'none'
       }
-    }, 3000) // -- hide slide-menu after 3secs
+    }, 0) // -- hide slide-menu after 3secs
 
     let examples = document.getElementById('examples');
     if (examples) {
@@ -162,6 +162,7 @@ function init () {
 
   if (editFrame) {
     let editHandle = document.getElementById('editHandle')
+    setElementWidth(editFrame, '0px')
     editHandle.addEventListener('click', function (e) {
       if (getElementWidth(editFrame) === 0) {
         setElementWidth(editFrame, '40%')
