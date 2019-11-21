@@ -7,6 +7,11 @@ const geometry = (dim, position) => ({
   dim, position
 });
 
+const topGeometry = () => ({
+  dim: [1, 1, 1],
+  position: [0, 0]
+});
+
 const City = (geometry, population) => ({
   kind: 'city',
   geometry,
@@ -144,23 +149,70 @@ const applyRules = (rules, shape) => {
   return newShape;
 };
 
-const jsonify = (shape) => {
-  return shape;
+const absolutizeGeometries = (shape, parentAbsoluteGeometry) => {
+  if (parentAbsoluteGeometry) {
+    console.log(parentAbsoluteGeometry);
+    const newGeometry = {
+      dim: [
+        parentAbsoluteGeometry.dim[0] * shape.geometry.dim[0],
+        parentAbsoluteGeometry.dim[1] * shape.geometry.dim[1],
+        parentAbsoluteGeometry.dim[1] * shape.geometry.dim[2]
+      ],
+      pos: [
+        parentAbsoluteGeometry.position[0] + shape.geometry.position[0] * parentAbsoluteGeometry.dim[0],
+        parentAbsoluteGeometry.position[1] + shape.geometry.position[1] * parentAbsoluteGeometry.dim[1],
+      ]
+    };
+
+    const newShape = {
+      ...shape,
+      geometry: newGeometry
+    };
+
+    if (shape.children) {
+      newShape.children = shape.children.map(childShape => {
+        return absolutizeGeometries(childShape, newGeometry);
+      });
+    }
+
+    return newShape;
+  } else {
+    return absolutizeGeometries(shape, topGeometry());
+  }
+};
+
+
+const flatten = (shape) => {
+  return treeFold(
+    leafShape => {
+      const newLeaf = {...leafShape};
+      delete newLeaf.children;
+      return [newLeaf];
+    },
+    (branchShape, ...flattenedChildren) => {
+      const newBranch = {...branchShape};
+      delete newBranch.children;
+
+      return flattenedChildren.reduce((a,b) => a.concat(b), [newBranch]);
+    }
+  )(shape);
 };
 
 const main = () => {
   const startingPopulation = 0.5;
 
-  let city = City({
-    dim: [1,1,1],
-    position: [0,0]
-  }, startingPopulation);
+  let city = City(topGeometry(), startingPopulation);
 
   city = loop(city);
 
-  console.log(sum(city))
+  // console.log(absolutizeGeometries)
+  console.log(flatten(city));
+  console.log(size(city));
+  console.log(flatten(city).length);
 
-  return jsonify(city);
+  // return city;
+  return flatten(city);
+  // return absolutizeGeometries(city);
 }
 
 const sum = treeFold(
@@ -171,8 +223,11 @@ const sum = treeFold(
   }
 );
 
-const size = treeFold(
 
-)
+
+const size = treeFold(
+  leafShape => 1,
+  (branchShape, ...childSizes) => childSizes.reduce((a,b) => a + b, 1)
+);
 
 fs.writeFileSync('./output.json', JSON.stringify(main(), null, 2));
