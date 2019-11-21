@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const maxDim = 30;
 const numHouses = 300;
 const numSkyScrapers = 30;
@@ -19,4 +17,4 @@ const cityData = {
   ...buildBuildings('skyScraper', numSkyScrapers),
 };
 
-fs.writeFileSync('./data/city.json', JSON.stringify(cityData))
+console.log(JSON.stringify(cityData))
