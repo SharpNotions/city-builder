@@ -1,639 +1,481 @@
-[
-  {
-    "kind": "city",
-    "geometry": {
-      "dim": [
-        1,
-        1,
-        1
-      ],
-      "position": [
-        0,
-        0
+{
+  "kind": "city",
+  "geometry": {
+    "dim": [
+      1,
+      1,
+      1
+    ],
+    "position": [
+      0,
+      0
+    ]
+  },
+  "population": 0.5,
+  "children": [
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.6,
+          0.4
+        ]
+      },
+      "population": 0.038461538461538464,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.6,
+              0.4
+            ]
+          }
+        }
       ]
     },
-    "population": 0.5
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.2
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0,
+          0.6
+        ]
+      },
+      "population": 0.007692307692307693,
+      "children": [
+        {
+          "kind": "house",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0,
+              0.6
+            ]
+          }
+        }
       ]
     },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.2
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.8,
+          0
+        ]
+      },
+      "population": 0.007692307692307693,
+      "children": [
+        {
+          "kind": "house",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.8,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.6,
+          0.6
+        ]
+      },
+      "population": 0.023076923076923078,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.6,
+              0.6
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.6,
+          0
+        ]
+      },
+      "population": 0.007692307692307693,
+      "children": [
+        {
+          "kind": "house",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.6,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.2,
+          0.2
+        ]
+      },
+      "population": 0.023076923076923078,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.2,
+              0.2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.4,
+          0.4
+        ]
+      },
+      "population": 0.06923076923076923,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.4,
+              0.4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.6,
+          0.8
+        ]
+      },
+      "population": 0.007692307692307693,
+      "children": [
+        {
+          "kind": "house",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.6,
+              0.8
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.4,
+          0.8
+        ]
+      },
+      "population": 0.023076923076923078,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.4,
+              0.8
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.6,
+          0.2
+        ]
+      },
+      "population": 0.023076923076923078,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.6,
+              0.2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.4,
+          0.2
+        ]
+      },
+      "population": 0.038461538461538464,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.4,
+              0.2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.2,
+          0.4
+        ]
+      },
+      "population": 0.038461538461538464,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.2,
+              0.4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.4,
+          0.6
+        ]
+      },
+      "population": 0.038461538461538464,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.4,
+              0.6
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0,
+          0
+        ]
+      },
+      "population": 0.007692307692307693,
+      "children": [
+        {
+          "kind": "house",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.8,
+          0.4
+        ]
+      },
+      "population": 0.023076923076923078,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.8,
+              0.4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "building",
+      "geometry": {
+        "dim": [
+          0.2,
+          0.2
+        ],
+        "position": [
+          0.4,
+          0
+        ]
+      },
+      "population": 0.023076923076923078,
+      "children": [
+        {
+          "kind": "skyscraper",
+          "geometry": {
+            "dim": [
+              0.2,
+              0.2
+            ],
+            "position": [
+              0.4,
+              0
+            ]
+          }
+        }
       ]
     }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0.2
-      ]
-    },
-    "population": 0.023076923076923078
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0.2
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0.6
-      ]
-    },
-    "population": 0.023076923076923078
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0.6
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.8,
-        0
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.8,
-        0
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.6
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.6
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.8,
-        0.6
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.8,
-        0.6
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.8,
-        0.2
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.1
-      ],
-      "position": [
-        0,
-        0
-      ]
-    },
-    "population": 0.0038461538461538464
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.1
-      ],
-      "position": [
-        0,
-        0
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.1
-      ],
-      "position": [
-        0,
-        0.5
-      ]
-    },
-    "population": 0.0038461538461538464
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.1
-      ],
-      "position": [
-        0,
-        0.5
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.2,
-        0.6
-      ]
-    },
-    "population": 0.023076923076923078
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.2,
-        0.6
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0.8
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.6,
-        0.8
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.4,
-        0.8
-      ]
-    },
-    "population": 0.023076923076923078
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.4,
-        0.8
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.8,
-        0.8
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.8,
-        0.8
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.4,
-        0
-      ]
-    },
-    "population": 0.023076923076923078
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.4,
-        0
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.4,
-        0.4
-      ]
-    },
-    "population": 0.06923076923076923
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.4,
-        0.4
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.4
-      ]
-    },
-    "population": 0.023076923076923078
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.4
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.2,
-        0.2
-      ]
-    },
-    "population": 0.023076923076923078
-  },
-  {
-    "kind": "skyscraper",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.2,
-        0.2
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.8
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0,
-        0.8
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.4,
-        0.2
-      ]
-    },
-    "population": 0.038461538461538464
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.1,
-        0.2
-      ],
-      "position": [
-        0,
-        0
-      ]
-    },
-    "population": 0.019230769230769232
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.1,
-        0.2
-      ],
-      "position": [
-        0,
-        0
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.1,
-        0.2
-      ],
-      "position": [
-        0.5,
-        0
-      ]
-    },
-    "population": 0.019230769230769232
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.1,
-        0.2
-      ],
-      "position": [
-        0.5,
-        0
-      ]
-    }
-  },
-  {
-    "kind": "building",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.2,
-        0
-      ]
-    },
-    "population": 0.007692307692307693
-  },
-  {
-    "kind": "house",
-    "geometry": {
-      "dim": [
-        0.2,
-        0.2
-      ],
-      "position": [
-        0.2,
-        0
-      ]
-    }
-  }
-]
+  ]
+}

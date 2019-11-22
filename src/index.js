@@ -206,12 +206,14 @@ const main = () => {
   city = loop(city);
 
   // console.log(absolutizeGeometries)
-  console.log(flatten(city));
-  console.log(size(city));
-  console.log(flatten(city).length);
 
   // return city;
-  return flatten(city);
+  return {
+    city,
+    flattened: flatten(city),
+  }
+
+  flatten(city);
   // return absolutizeGeometries(city);
 }
 
@@ -230,4 +232,6 @@ const size = treeFold(
   (branchShape, ...childSizes) => childSizes.reduce((a,b) => a + b, 1)
 );
 
-fs.writeFileSync('./output.json', JSON.stringify(main(), null, 2));
+const result = main();
+fs.writeFileSync('./output.json', JSON.stringify(result.city, null, 2));
+fs.writeFileSync('./outputFlattened.json', JSON.stringify(result.flattened, null, 2));
