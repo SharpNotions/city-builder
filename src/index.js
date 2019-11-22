@@ -194,7 +194,7 @@ const main = () => {
 
   let city = City(topGeometry(), startingPopulation);
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 30; i++) {
     city = applyRules(rules, city);
   }
 

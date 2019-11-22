@@ -1,17 +1,20 @@
+const globalScalar = 2;
+const positionalScalar = 25;
+
 const buildBuilding = (position, scale) =>
-  cube({ size: 1, center: [true, true, false] })
+  cube({ size: globalScalar, center: [true, true, false] })
     .translate(position)
     .scale(scale);
 
 const buildHouse = position =>
-  buildBuilding(position, [1, 1, 1]);
+  buildBuilding(position, [globalScalar, globalScalar, globalScalar]);
 
 const buildSkyScraper = position => {
-  return buildBuilding(position, [1, 1, Math.floor(Math.random() * 3) + 3]);
+  return buildBuilding(position, [globalScalar, globalScalar, globalScalar * (Math.floor(Math.random() * 3) + 3)]);
 }
 
 const getBuildingPosition = building =>
-  [building.x, building.y, 0];
+  [positionalScalar * building.x + positionalScalar / 2, positionalScalar * building.y + positionalScalar / 2, 0];
 
 const builders = {
   house: buildHouse,
