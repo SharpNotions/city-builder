@@ -64,7 +64,7 @@ const rules = {
       const chosenLocations = chance.pickset(possibleLocations, numLocations);
 
       newCity.children = chosenLocations.map(([x, y]) => Building({
-        dim: [city.geometry.dim[0] / 5, city.geometry.dim[1] / 5],
+        dim: [city.geometry.dim[0] / 5, city.geometry.dim[1] / 5, city.geometry.dim[2]],
         position: [x / 5, y / 5]
       }, city.population * locationPopulations[x][y] / locationPopulationSum));
 
@@ -92,22 +92,22 @@ const rules = {
       if (Math.random() < 0.5) {
         newBuilding.children = [
           Building({
-            dim: [building.geometry.dim[0] * 0.5, building.geometry.dim[1]],
+            dim: [building.geometry.dim[0] * 0.5, building.geometry.dim[1], building.geometry.dim[2] * Math.random()],
             position: [0, 0]
           }, building.population * 0.5),
           Building({
-            dim: [building.geometry.dim[0] * 0.5, building.geometry.dim[1]],
+            dim: [building.geometry.dim[0] * 0.5, building.geometry.dim[1], building.geometry.dim[2] * Math.random()],
             position: [0.5, 0]
           }, building.population * 0.5),
         ];
       } else {
         newBuilding.children = [
           Building({
-            dim: [building.geometry.dim[0], building.geometry.dim[1] * 0.5],
+            dim: [building.geometry.dim[0], building.geometry.dim[1] * 0.5, building.geometry.dim[2] * Math.random()],
             position: [0, 0]
           }, building.population * 0.5),
           Building({
-            dim: [building.geometry.dim[0], building.geometry.dim[1] * 0.5],
+            dim: [building.geometry.dim[0], building.geometry.dim[1] * 0.5, building.geometry.dim[2] * Math.random()],
             position: [0, 0.5]
           }, building.population * 0.5),
         ];
@@ -151,14 +151,13 @@ const applyRules = (rules, shape) => {
 
 const absolutizeGeometries = (shape, parentAbsoluteGeometry) => {
   if (parentAbsoluteGeometry) {
-    console.log(parentAbsoluteGeometry);
     const newGeometry = {
       dim: [
         parentAbsoluteGeometry.dim[0] * shape.geometry.dim[0],
         parentAbsoluteGeometry.dim[1] * shape.geometry.dim[1],
-        parentAbsoluteGeometry.dim[1] * shape.geometry.dim[2]
+        parentAbsoluteGeometry.dim[2] * shape.geometry.dim[2]
       ],
-      pos: [
+      position: [
         parentAbsoluteGeometry.position[0] + shape.geometry.position[0] * parentAbsoluteGeometry.dim[0],
         parentAbsoluteGeometry.position[1] + shape.geometry.position[1] * parentAbsoluteGeometry.dim[1],
       ]
@@ -205,7 +204,7 @@ const main = () => {
 
   city = loop(city);
 
-  // console.log(absolutizeGeometries)
+  city = absolutizeGeometries(city);
 
   // return city;
   return {
@@ -235,3 +234,5 @@ const size = treeFold(
 const result = main();
 fs.writeFileSync('./output.json', JSON.stringify(result.city, null, 2));
 fs.writeFileSync('./outputFlattened.json', JSON.stringify(result.flattened, null, 2));
+
+console.log(JSON.stringify(result.flattened));
