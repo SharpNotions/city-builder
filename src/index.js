@@ -50,11 +50,11 @@ const rules = {
         [0,1,2,3,4]
       );
       const locationPopulations = [
-        [1, 1, 3, 1, 1],
-        [1, 3, 5, 3, 1],
-        [3, 5, 9, 5, 3],
-        [1, 3, 5, 3, 1],
-        [1, 1, 3, 1, 1],
+        [1, 1, 3,  1, 1],
+        [1, 3, 7,  3, 1],
+        [3, 7, 20, 7, 3],
+        [1, 3, 7,  3, 1],
+        [1, 1, 3,  1, 1],
       ];
       const locationPopulationSum = locationPopulations.reduce((sum, arr) => {
         return arr.reduce((a, b) => a + b, sum);
@@ -72,7 +72,7 @@ const rules = {
     })
   ],
   building: [
-    Rule(05, (building) => {
+    Rule(0.5, (building) => {
       if (building.population <= 0.023) {
         return {
           ...building,
@@ -116,14 +116,6 @@ const rules = {
       return newBuilding;
     })
   ]
-};
-
-const loop = (city) => {
-  for (let i = 0; i < 3; i++) {
-    city = applyRules(rules, city);
-  }
-
-  return city;
 };
 
 const applyRules = (rules, shape) => {
@@ -202,7 +194,9 @@ const main = () => {
 
   let city = City(topGeometry(), startingPopulation);
 
-  city = loop(city);
+  for (let i = 0; i < 3; i++) {
+    city = applyRules(rules, city);
+  }
 
   city = absolutizeGeometries(city);
 
@@ -210,10 +204,7 @@ const main = () => {
   return {
     city,
     flattened: flatten(city),
-  }
-
-  flatten(city);
-  // return absolutizeGeometries(city);
+  };
 }
 
 const sum = treeFold(
